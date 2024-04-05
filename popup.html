@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetRolled Settings</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("rickroll_4k.jpg"); /* Replace 'rickroll_image.jpg' with the URL or path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+    .container {
+      min-width: 300px;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+      text-align: center; /* Center text horizontally */
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+    }
+    .form-group label {
+      text-align: center; /* Center label text */
+    }
+    .form-check-label {
+      margin-right: 10px;
+    }
+    .slider-container {
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+    }
+    .slider-value {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      color: black; /* Text color */
+    }
+    h4 {
+      color: #333; /* Dark text color */
+      margin-bottom: 20px; /* Add margin at the bottom */
+    }
+    .form-group label {
+      color: #333; /* Dark text color */
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+    }
+    .btn {
+      width: 50%; /* Adjust the width of the button as needed */
+      margin-top: 10px; /* Add some spacing between the button and other elements */
+    }
+    /* Add this CSS to center the save button */
+    .center-btn {
+      display: flex;
+      justify-content: center; /* Center items horizontally */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h4>GetRolled Settings</h4>
+    <form id="settingsForm">
+      <div class="form-group">
+        <label for="chance">Chance (%)</label>
+        <div class="slider-container">
+          <input
+            type="range"
+            class="form-control-range"
+            id="chance"
+            min="1"
+            max="100"
+          />
+          <span id="percentage" class="slider-value">50%</span>
+          <!-- Added span for percentage display -->
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="chaosCheckbox"
+          />
+          <label class="form-check-label" for="chaosCheckbox"
+            >Chaos Mode</label
+          >
+        </div>
+      </div>
+      <!-- Add custom class to center the button -->
+      <div class="form-group center-btn">
+        <button type="button" class="btn btn-primary" id="saveButton">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
